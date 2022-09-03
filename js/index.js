@@ -39,7 +39,7 @@ const displayNews = newses => {
   newsContainer.innerHTML = ``;
   const resultsDiv = document.createElement('div');
   resultsDiv.innerHTML = `
-  <h1>${newses.length ? newses.length : 'No'} results is found in this category</h1>
+  <h1 class="text-primary">${newses.length ? newses.length : 'No'} results is found in this category</h1>
   `
   newsContainer.appendChild(resultsDiv);
 
