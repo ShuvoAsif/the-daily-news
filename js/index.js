@@ -37,6 +37,7 @@ const loadNews = (category_id) => {
 const displayNews = news => {
   console.log(displayNews);
   const newsContainer = document.getElementById('news-container');
+  newsContainer.innerHTML = ``;
   const newsDiv = document.createElement('div');
   newsDiv.innerHTML = `
          <div class="card mb-3 mx-auto" style="max-width: 1000px;">
