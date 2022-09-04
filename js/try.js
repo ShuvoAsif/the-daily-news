@@ -17,18 +17,18 @@ console.log(news);
 
 
 const loadDetails = (_id) => {
-    const url = `URL Format: https://openapi.programming-hero.com/api/news/${_id}`;
-    fetch(url)
-        .then(res => res.json())
-        .then(data => displaydetails(data.data));
+  const url = `URL Format: https://openapi.programming-hero.com/api/news/${_id}`;
+  fetch(url)
+    .then(res => res.json())
+    .then(data => displaydetails(data.data));
 }
 
 
 
 const displaydetails = details => {
-    const newsContainer = document.getElementById('news-container');
-    const detailsDiv = document.createElement('div');
-    newsDiv.innerHTML = `
+  const newsContainer = document.getElementById('news-container');
+  const detailsDiv = document.createElement('div');
+  newsDiv.innerHTML = `
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 <div class="modal-dialog">
   <div class="modal-content">
@@ -47,5 +47,18 @@ const displaydetails = details => {
 </div>
 </div>
 `;
-    newsContainer.appendChild(newsDiv);
+  newsContainer.appendChild(newsDiv);
 }
+
+
+
+
+<p class="card-text">${news.details}</p>
+<div class="d-flex justify-content-between">
+    <div>
+        <P>Total views:${news.total_view ? news.total_view : 'No Views'}</p>
+    </div>
+</div>
+<div>
+    <P>Rating:${news.rating.number ? news.rating.number : 'No Rating'}</p>
+</div>
