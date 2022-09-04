@@ -1,3 +1,6 @@
+
+//---------------------------all news category--------------------------------- 
+
 const loadCategories = async () => {
   const url = `https://openapi.programming-hero.com/api/news/categories`;
   try {
@@ -25,13 +28,15 @@ const displayCategories = categories => {
   })
 }
 
-//------------------------------------------
-// -----------------------------------------
+//------------------------------loadNews-----------------------------
+
 const loadNews = (category_id) => {
   const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
   fetch(url)
     .then(res => res.json())
-    .then(data => displayNews(data.data));
+    .then(data => displayNews(data.data))
+    .catch(error => console.log(error));
+
 }
 
 const displayNews = newses => {
@@ -85,12 +90,13 @@ const displayNews = newses => {
   })
 }
 
-//------------------------------------------
+//------------------------------modal------------------------------
 const showModal = (_id) => {
   const url = `https://openapi.programming-hero.com/api/news/${_id}`;
   fetch(url)
     .then(res => res.json())
-    .then(data => displayModal(data.data));
+    .then(data => displayModal(data.data))
+    .catch(error => console.log(error));
 }
 
 
