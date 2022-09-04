@@ -121,5 +121,5 @@ const displayModal = modals => {
     </div>`
   })
 }
-
+loadNews('08');
 loadCategories();
