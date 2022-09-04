@@ -18,7 +18,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand bg-primary fs-3 fw-bold text-light p-1 px-3 rounded-1">The Daily News</a>
                 <div class="d-flex p-1" role="search">
-                    <a class="btn btn-outline-success fs-5 mx-1" href="http://">News</a>
+                    <a class="btn btn-outline-success fs-5 mx-1" href="index.html">News</a>
                     <a class="btn btn-outline-success fs-5 mx-1" href="blog.html">Blog</a>
 
                 </div>
@@ -36,6 +36,15 @@
         <div id="news-container" class="my-3">
 
         </div>
+
+        <!-- loader -->
+        <section id="loader" class="d-none">
+            <div style="height: 400px;" class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border  text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
         <!------------------------------modal------------------------------->
 
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"

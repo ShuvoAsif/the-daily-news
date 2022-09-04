@@ -37,6 +37,8 @@ const loadNews = (category_id) => {
     .then(data => displayNews(data.data))
     .catch(error => console.log(error));
 
+  // start loader
+  toggleSpinner(true);
 }
 
 const displayNews = newses => {
@@ -88,6 +90,21 @@ const displayNews = newses => {
 </div>`;
     newsContainer.appendChild(newsDiv);
   })
+  // stop spinner or loader
+  toggleSpinner(false);
+}
+
+
+//---------------------------spiner-----------------------------
+
+const toggleSpinner = isLoading => {
+  const loaderSection = document.getElementById('loader');
+  if (isLoading) {
+    loaderSection.classList.remove('d-none')
+  }
+  else {
+    loaderSection.classList.add('d-none');
+  }
 }
 
 //------------------------------modal------------------------------
